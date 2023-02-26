@@ -23,8 +23,8 @@ class AppBarActionItems extends StatelessWidget {
         IconButton(
             icon: SvgPicture.asset('assets/ring.svg', width: 20.0),
             onPressed: () {}),
-        SizedBox(width: 15),
-        Row(children: [
+        const SizedBox(width: 15),
+        Row(children: const [
           CircleAvatar(
             radius: 17,
             backgroundImage: NetworkImage(

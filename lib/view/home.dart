@@ -111,7 +111,7 @@ class HomePage extends StatelessWidget {
                 AppBarActionItems(),
               ],
             )
-          : PreferredSize(
+          : const PreferredSize(
               preferredSize: Size.zero,
               child: SizedBox(),
             ),
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
                   child: SingleChildScrollView(
                     padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Header(),
                         SizedBox(
@@ -144,6 +144,9 @@ class HomePage extends StatelessWidget {
                             width: screenSize.width,
                             child: CustomCarouselSlider(
                               items: itemList,
+                              autoplayDuration: Duration(seconds: 6),
+                              //animationDuration: Duration(seconds:3),
+                              animationCurve: Curves.bounceInOut,
                               height: 150,
                               subHeight: 50,
                               width: MediaQuery.of(context).size.width * .9,
@@ -160,9 +163,11 @@ class HomePage extends StatelessWidget {
                         SizedBox(
                           width: SizeConfig.screenWidth,
                           child: Wrap(
-                            spacing: 20,
-                            runSpacing: 20,
-                            alignment: WrapAlignment.spaceBetween,
+                            spacing: 10,
+                            runSpacing: 10,
+                            runAlignment: WrapAlignment.end,
+                            alignment: WrapAlignment.end,
+                            crossAxisAlignment: WrapCrossAlignment.end,
                             children: [
                               InfoCard(
                                   icon: 'assets/credit-card.svg',
@@ -264,10 +269,10 @@ class HomePage extends StatelessWidget {
                     decoration: const BoxDecoration(color: AppColors.secondaryBg),
                     child: SingleChildScrollView(
                       padding:
-                          EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+                          const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
                       child: Column(
-                        children: const [
-                          AppBarActionItems(),
+                        children:  [
+                          const AppBarActionItems(),
 
                           PaymentDetailList(),
                         ],

@@ -11,12 +11,13 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screen= MediaQuery.of(context).size;
     return Drawer(
       elevation: 0,
       child: Container(
         width: double.infinity,
         height: SizeConfig.screenHeight,
-        decoration: BoxDecoration(color: AppColors.secondaryBg),
+        decoration: const BoxDecoration(color: AppColors.secondaryBg),
         child: SingleChildScrollView(
                   child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,63 +26,74 @@ class SideMenu extends StatelessWidget {
                height: 100,
                alignment: Alignment.topCenter,
                width: double.infinity,
-               padding: EdgeInsets.only(top: 20),
+               padding: const EdgeInsets.only(top: 20),
                child: SizedBox(
                     width: 35,
                     height: 20,
                     child: SvgPicture.asset('assets/mac-action.svg'),
                   ),
              ),
-              IconButton(
-                  iconSize: 20,
 
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  icon: SvgPicture.asset(
+              Column(
+                children: [
+                  SvgPicture.asset(
                     'assets/home.svg',
+                    height: 24,
                     color: AppColors.iconGray,
                   ),
-                  onPressed: () {}),
+                  const Text("الرئيسية",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                ],
+              ),
+              SizedBox(height: screen.height* 0.1 -54,),
+              Column(
+                children: [
+                  SvgPicture.asset(
+                  'assets/trophy.svg',
+                  height: 24,
+                  color: AppColors.iconGray,
+                ),
+                  const Text("إنجازات المركز",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                ],
+              ),
 
-              ElevatedButton.icon(
-                style: ButtonStyle(backgroundColor: MaterialStateColor.resolveWith((states) => Colors.transparent),elevation:MaterialStateProperty.resolveWith((states) => 0.0)),
-                  icon: SvgPicture.asset(
-                    'assets/pie-chart.svg',
-                    height: 20,
-                    color: AppColors.iconGray,
-                  ),
-                  onPressed: () {}, label:             const Text(" SSSS SSS ",maxLines: 1,),),
-              IconButton(
-                  iconSize: 20,
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  icon: SvgPicture.asset(
-                    'assets/clipboard.svg',
-                    color: AppColors.iconGray,
-                  ),
-                  onPressed: () {}),
-              IconButton(
-                  iconSize: 20,
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  icon: SvgPicture.asset(
-                    'assets/credit-card.svg',
-                    color: AppColors.iconGray,
-                  ),
-                  onPressed: () {}),
-              IconButton(
-                  iconSize: 20,
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  icon: SvgPicture.asset(
-                    'assets/trophy.svg',
-                    color: AppColors.iconGray,
-                  ),
-                  onPressed: () {}),
-              IconButton(
-                  iconSize: 20,
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  icon: SvgPicture.asset(
+              SizedBox(height: screen.height* 0.1 -54,),
+              Column(
+                children: [
+                  SvgPicture.asset(
                     'assets/invoice.svg',
+                    height: 24,
                     color: AppColors.iconGray,
                   ),
-                  onPressed: () {}),
+                  const Text("من نحن",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                ],
+              ),
+
+              SizedBox(height: screen.height* 0.1 -54,),
+              Column(
+                children: [
+                  SvgPicture.asset(
+                    'assets/clipboard.svg',
+                    height: 24,
+                    color: AppColors.iconGray,
+                  ),
+                  const Text("اصداراتنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                ],
+              ),
+
+              SizedBox(height: screen.height* 0.1 -54,),
+
+              Column(
+                children: [
+                  SvgPicture.asset(
+                    'assets/clipboard.svg',
+                    height: 24,
+                    color: AppColors.iconGray,
+                  ),
+                  const Text("تواصل معنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                ],
+              ),
+
+
             ],
           ),
         ),
