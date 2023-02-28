@@ -28,11 +28,13 @@ class _PaymentDetailListState extends State<PaymentDetailList> {
         'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',)
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-       _chewieController = ChewieController(videoPlayerController: _controller);
+       _chewieController = ChewieController(videoPlayerController: _controller,
+       autoPlay: true,
+       looping: true,
+       );
        showVideo =true;
         setState(() {});
       });
-    _controller.play();
   }
 
   @override
@@ -76,18 +78,21 @@ class _PaymentDetailListState extends State<PaymentDetailList> {
       SizedBox(
         height: SizeConfig.blockSizeVertical! * 5,
       ),
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          PrimaryText(
-              text: 'Recent Activities', size: 18, fontWeight: FontWeight.w800),
-          PrimaryText(
-            text: '02 Mar 2021',
-            size: 14,
-            fontWeight: FontWeight.w400,
-            color: AppColors.secondary,
-          ),
-        ],
+      Align(
+        alignment: Alignment.centerRight,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: const [
+            PrimaryText(
+                text: 'صدقات وتبرعات', size: 18, fontWeight: FontWeight.w800),
+            PrimaryText(
+              text: '2023',
+              size: 14,
+              fontWeight: FontWeight.w400,
+              color: AppColors.secondary,
+            ),
+          ],
+        ),
       ),
       SizedBox(
         height: SizeConfig.blockSizeVertical! * 2,
@@ -104,31 +109,31 @@ class _PaymentDetailListState extends State<PaymentDetailList> {
       SizedBox(
         height: SizeConfig.blockSizeVertical! * 5,
       ),
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          PrimaryText(
-              text: 'Upcoming Payments', size: 18, fontWeight: FontWeight.w800),
-          PrimaryText(
-            text: '02 Mar 2021',
-            size: 14,
-            fontWeight: FontWeight.w400,
-            color: AppColors.secondary,
-          ),
-        ],
-      ),
-      SizedBox(
-        height: SizeConfig.blockSizeVertical! * 2,
-      ),
-      Column(
-        children: List.generate(
-          upcomingPayments.length,
-          (index) => PaymentListTile(
-              icon: upcomingPayments[index]["icon"]!,
-              label: upcomingPayments[index]["label"]!,
-              amount: upcomingPayments[index]["amount"]!),
-        ),
-      ),
+      // Column(
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //   children: const [
+      //     PrimaryText(
+      //         text: 'Upcoming Payments', size: 18, fontWeight: FontWeight.w800),
+      //     PrimaryText(
+      //       text: '02 Mar 2021',
+      //       size: 14,
+      //       fontWeight: FontWeight.w400,
+      //       color: AppColors.secondary,
+      //     ),
+      //   ],
+      // ),
+      // SizedBox(
+      //   height: SizeConfig.blockSizeVertical! * 2,
+      // ),
+      // Column(
+      //   children: List.generate(
+      //     upcomingPayments.length,
+      //     (index) => PaymentListTile(
+      //         icon: upcomingPayments[index]["icon"]!,
+      //         label: upcomingPayments[index]["label"]!,
+      //         amount: upcomingPayments[index]["amount"]!),
+      //   ),
+      // ),
     ]);
   }
 }

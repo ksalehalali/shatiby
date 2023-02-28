@@ -3,8 +3,6 @@ import 'package:flutter_custom_carousel_slider/flutter_custom_carousel_slider.da
 
 import 'package:shatiby/view/style/colors.dart';
 import 'package:shatiby/view/style/style.dart';
-
-
 import '../config/responsive.dart';
 import '../config/size_config.dart';
 import 'component/appBarActionItems.dart';
@@ -128,7 +126,7 @@ class HomePage extends StatelessWidget {
                 flex: 10,
                 child: SafeArea(
                   child: SingleChildScrollView(
-                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -144,7 +142,7 @@ class HomePage extends StatelessWidget {
                             width: screenSize.width,
                             child: CustomCarouselSlider(
                               items: itemList,
-                              autoplayDuration: Duration(seconds: 6),
+                              autoplayDuration: const Duration(seconds: 6),
                               //animationDuration: Duration(seconds:3),
                               animationCurve: Curves.bounceInOut,
                               height: 150,
@@ -171,7 +169,7 @@ class HomePage extends StatelessWidget {
                             children: [
                               InfoCard(
                                   icon: 'assets/credit-card.svg',
-                                  label: 'الماجزون',
+                                  label: 'المجازون',
                                   amount: '300+'),
                               InfoCard(
                                   icon: 'assets/transfer.svg',
@@ -198,29 +196,31 @@ class HomePage extends StatelessWidget {
                         ),
                         //bar chart
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children:  [
+
+                            // const PrimaryText(
+                            //                             //   text: 'Past 30 DAYS',
+                            //                             //   size: 16,
+                            //                             //   fontWeight: FontWeight.w400,
+                            //                             //   color: AppColors.secondary,
+                            //                             // ),
+
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 PrimaryText(
-                                  text: 'Balance',
+                                  text: 'الطلاب الحاليين',
                                   size: 16,
                                   fontWeight: FontWeight.w400,
                                   color: AppColors.secondary,
                                 ),
                                 PrimaryText(
-                                    text: '\$1500',
+                                    text: '1200+',
                                     size: 30,
                                     fontWeight: FontWeight.w800),
                               ],
-                            ),
-                            const PrimaryText(
-                              text: 'Past 30 DAYS',
-                              size: 16,
-                              fontWeight: FontWeight.w400,
-                              color: AppColors.secondary,
                             ),
                           ],
                         ),

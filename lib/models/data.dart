@@ -1,22 +1,22 @@
 const recentActivities = [
   {
     "icon": 'assets/drop.svg',
-    "label": 'Water Bill',
+    "label": 'جمعية تراحم',
     "amount": "\$120"
   },
   {
     "icon": 'assets/salary.svg',
-    "label": 'Income Salary',
+    "label": 'جمعية تراحم',
     "amount": "\$4500"
   },
   {
     "icon": 'assets/electricity.svg',
-    "label": 'Electric Bill',
+    "label": 'مجموعة العثمان',
     "amount": "\$150"
   },
   {
     "icon": 'assets/wifi.svg',
-    "label": 'Internet Bill',
+    "label": 'احمد مطر',
     "amount": "\$60"
   },
 ];

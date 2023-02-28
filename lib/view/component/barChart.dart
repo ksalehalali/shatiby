@@ -17,47 +17,47 @@ class BarChartCopmponent extends StatelessWidget {
   BarChartData(
     borderData: FlBorderData(show: false) ,
     alignment: BarChartAlignment.spaceBetween,
-    axisTitleData: FlAxisTitleData(leftTitle: AxisTitle(reservedSize: 20)),
+    axisTitleData: FlAxisTitleData(leftTitle: AxisTitle(reservedSize: 44)),
     gridData: FlGridData(drawHorizontalLine: true, horizontalInterval: 30),
     titlesData: FlTitlesData(leftTitles: SideTitles(reservedSize: 30, getTextStyles: (value) => const TextStyle(
             color: Colors.grey, fontSize: 12),showTitles: true,  getTitles: (value) {
           if (value == 0) {
-            return '0';
+            return 'جزء 0';
           } else if (value == 30) {
-            return '30k';
+            return 'جزء 10';
           }  else if (value == 60) {
-            return '60k';
+            return 'جزء 20';
           }  else if (value == 90) {
-            return '90k';
+            return 'جزء 30';
           } else {
             return '';
           }
         },), bottomTitles: SideTitles(showTitles: true, getTextStyles: (value) => const TextStyle(
-            color: Colors.grey, fontSize: 12), getTitles: (value) {
+            color: Colors.grey, fontSize: 10), getTitles: (value) {
           if (value == 0) {
-            return 'JAN';
+            return 'احمد العلي';
           } else if (value == 1) {
-            return 'FEB';
+            return 'صالح الحسن';
           }  else if (value == 2) {
-            return 'MAR';
+            return 'ريمة العبد الرزاق';
           }  else if (value == 3) {
-            return 'APR';
+            return 'فاطمة احمد';
           } else if (value == 4) {
-            return 'MAY';
+            return 'حسن الصالح';
           }  else if (value == 5) {
-            return 'JUN';
+            return 'سارا العلي';
           }  else if (value == 6) {
-            return 'JUL';
+            return 'فاطمة الحسين';
           }  else if (value == 7) {
-            return 'AUG';
+            return 'عبدالعزيز العلي';
           }  else if (value == 8) {
-            return 'SEP';
+            return 'خالد الصالح';
           }  else if (value == 9) {
-            return 'OCT';
+            return 'منى الرشيد';
           }  else if (value == 10) {
-            return 'NOV';
+            return 'تالية الحسن';
           }  else if (value == 11) {
-            return 'DEC';
+            return 'سوسن المحمد';
           }  else {
             return '';
           }
@@ -138,7 +138,7 @@ class BarChartCopmponent extends StatelessWidget {
     ]
     
   ),
-  swapAnimationDuration: Duration(milliseconds: 150), // Optional
+  swapAnimationDuration: const Duration(milliseconds: 150), // Optional
   swapAnimationCurve: Curves.linear, // Optional
 );
   }

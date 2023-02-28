@@ -41,7 +41,7 @@ class SideMenu extends StatelessWidget {
                     height: 24,
                     color: AppColors.iconGray,
                   ),
-                  const Text("الرئيسية",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                  const Text("الرئيسية",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
                 ],
               ),
               SizedBox(height: screen.height* 0.1 -54,),
@@ -52,7 +52,7 @@ class SideMenu extends StatelessWidget {
                   height: 24,
                   color: AppColors.iconGray,
                 ),
-                  const Text("إنجازات المركز",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                  const Text("إنجازات المركز",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
                 ],
               ),
 
@@ -64,7 +64,7 @@ class SideMenu extends StatelessWidget {
                     height: 24,
                     color: AppColors.iconGray,
                   ),
-                  const Text("من نحن",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                  const Text("من نحن",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
                 ],
               ),
 
@@ -76,7 +76,7 @@ class SideMenu extends StatelessWidget {
                     height: 24,
                     color: AppColors.iconGray,
                   ),
-                  const Text("اصداراتنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                  const Text("اصداراتنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
                 ],
               ),
 
@@ -89,7 +89,7 @@ class SideMenu extends StatelessWidget {
                     height: 24,
                     color: AppColors.iconGray,
                   ),
-                  const Text("تواصل معنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 16),),
+                  const Text("تواصل معنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
                 ],
               ),
 
