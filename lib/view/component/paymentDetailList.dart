@@ -8,7 +8,7 @@ import '../style/colors.dart';
 import '../style/style.dart';
 
 class PaymentDetailList extends StatefulWidget {
-  PaymentDetailList({
+  const PaymentDetailList({
     Key? key,
   }) : super(key: key);
 
@@ -24,39 +24,47 @@ class _PaymentDetailListState extends State<PaymentDetailList> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
+    createOneVideoHome();
+  }
+
+  createOneVideoHome(){
     _controller = VideoPlayerController.network(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',)
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',)
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-       _chewieController = ChewieController(videoPlayerController: _controller,
-       autoPlay: true,
-       looping: true,
-       );
-       showVideo =true;
+        _chewieController = ChewieController(videoPlayerController: _controller,
+
+          autoPlay: false,
+          looping: true,
+        );
+        showVideo =true;
         setState(() {});
       });
   }
-
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
+
     _controller.dispose();
     _chewieController.dispose();
   }
 
   Widget _chewieControllerPlayer(){
     return showVideo ? Container(
+
       child: Chewie(controller:_chewieController,),
-    ):const Text("Please wait...");
+    ):const Center(child: Text("Please wait..."));
   }
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      SizedBox(
-        height: SizeConfig.blockSizeVertical! * 5,
-      ),
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+
       Container(
         decoration:
             BoxDecoration(borderRadius: BorderRadius.circular(30), boxShadow: [
@@ -73,10 +81,27 @@ class _PaymentDetailListState extends State<PaymentDetailList> {
       ),
       SizedBox(
           height: screenSize.height *0.3,
-          child: _chewieControllerPlayer()),
 
+          child: _chewieControllerPlayer()),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: const [
+          Text("تكريم حافظات حلقة ريحان"),
+          Text("20 / 1 /2023"),
+
+        ],
+      ),
+      Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Container(
+          height: 2,
+          color: Colors.black26,
+          width: screenSize.width,
+        ),
+      ),
       SizedBox(
-        height: SizeConfig.blockSizeVertical! * 5,
+        height: SizeConfig.blockSizeVertical! * 3,
       ),
       Align(
         alignment: Alignment.centerRight,

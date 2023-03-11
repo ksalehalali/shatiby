@@ -1,6 +1,6 @@
 const recentActivities = [
   {
-    "icon": 'assets/drop.svg',
+    "icon": 'assets/salary.svg',
     "label": 'جمعية تراحم',
     "amount": "\$120"
   },
@@ -10,12 +10,12 @@ const recentActivities = [
     "amount": "\$4500"
   },
   {
-    "icon": 'assets/electricity.svg',
+    "icon": 'assets/salary.svg',
     "label": 'مجموعة العثمان',
     "amount": "\$150"
   },
   {
-    "icon": 'assets/wifi.svg',
+    "icon": 'assets/salary.svg',
     "label": 'احمد مطر',
     "amount": "\$60"
   },

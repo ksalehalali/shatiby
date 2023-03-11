@@ -19,7 +19,9 @@ class SideMenu extends StatelessWidget {
         height: SizeConfig.screenHeight,
         decoration: const BoxDecoration(color: AppColors.secondaryBg),
         child: SingleChildScrollView(
-                  child: Column(
+                  child: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
              Container(
@@ -28,74 +30,77 @@ class SideMenu extends StatelessWidget {
                width: double.infinity,
                padding: const EdgeInsets.only(top: 20),
                child: SizedBox(
-                    width: 35,
-                    height: 20,
-                    child: SvgPicture.asset('assets/mac-action.svg'),
-                  ),
+                      width: 35,
+                      height: 20,
+                      child: SvgPicture.asset('assets/mac-action.svg'),
+                    ),
              ),
 
               Column(
                 children: [
-                  SvgPicture.asset(
-                    'assets/home.svg',
-                    height: 24,
-                    color: AppColors.iconGray,
-                  ),
-                  const Text("الرئيسية",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
+                    SvgPicture.asset(
+                      'assets/home.svg',
+                      height: 24,
+                      color: AppColors.iconGray,
+                    ),
+                    const Text("الرئيسية",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 14),),
                 ],
               ),
               SizedBox(height: screen.height* 0.1 -54,),
               Column(
                 children: [
-                  SvgPicture.asset(
-                  'assets/trophy.svg',
-                  height: 24,
-                  color: AppColors.iconGray,
+                    SvgPicture.asset(
+                    'assets/trophy.svg',
+                    height: 24,
+                    color: AppColors.iconGray,
                 ),
-                  const Text("إنجازات المركز",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
+                    const Text("الإنجازات",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 14),),
                 ],
               ),
 
               SizedBox(height: screen.height* 0.1 -54,),
               Column(
                 children: [
-                  SvgPicture.asset(
-                    'assets/invoice.svg',
-                    height: 24,
-                    color: AppColors.iconGray,
-                  ),
-                  const Text("من نحن",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
+                    SvgPicture.asset(
+                      'assets/invoice.svg',
+                      height: 24,
+                      color: AppColors.iconGray,
+                    ),
+                    const Text("من نحن",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 14),),
                 ],
               ),
 
               SizedBox(height: screen.height* 0.1 -54,),
               Column(
                 children: [
-                  SvgPicture.asset(
-                    'assets/clipboard.svg',
-                    height: 24,
-                    color: AppColors.iconGray,
-                  ),
-                  const Text("اصداراتنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
+                    SvgPicture.asset(
+                      'assets/clipboard.svg',
+                      height: 24,
+                      color: AppColors.iconGray,
+                    ),
+                    const Text("اصداراتنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 14),),
                 ],
               ),
 
               SizedBox(height: screen.height* 0.1 -54,),
 
               Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset(
-                    'assets/clipboard.svg',
-                    height: 24,
-                    color: AppColors.iconGray,
-                  ),
-                  const Text("تواصل معنا",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 15),),
+                    SvgPicture.asset(
+                      'assets/clipboard.svg',
+                      height: 24,
+                      color: AppColors.iconGray,
+                    ),
+                    const Text("تواصل",maxLines: 1,style: TextStyle(color: Colors.black54,fontSize: 14),),
                 ],
               ),
 
 
             ],
           ),
+                  ),
         ),
       ),
     );

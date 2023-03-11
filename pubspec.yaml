@@ -40,8 +40,15 @@ dependencies:
   flutter_custom_carousel_slider: ^1.2.0
   video_player: ^2.5.2
   chewie: ^1.4.0
-
-
+  firebase_core: any
+  firebase_database: any
+  better_player: any
+  animated_icon_button: ^1.0.2
+  simple_icons: ^4.25.0
+  flutter_carousel_widget: ^2.0.2
+  firebase_storage:
+  firebase_core_web:
+  readmore:
 
 dev_dependencies:
   flutter_test:
